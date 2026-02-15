@@ -46,5 +46,5 @@ elif 'K4' in car :
 
 # for i in range(11, 0, -1) : # manual reversed list.
 
-# for i in reversed(range(10)) :
-    # print(i)
+for i in reversed(range(10)) :
+    print(i)
