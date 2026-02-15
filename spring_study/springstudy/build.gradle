@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.secuho'
 version = '0.0.1-SNAPSHOT'
-description = 'secuho's study project for spring Boot'
+description = 'secuho spring boot study project'
 
 java {
 	toolchain {
