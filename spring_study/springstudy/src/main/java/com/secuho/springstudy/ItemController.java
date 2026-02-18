@@ -21,7 +21,11 @@ public class ItemController {
         List<Item> result = itemRepository.findAll();
         System.out.println(result.get(0).price);
         System.out.println(result.get(0).title);
-        model.addAttribute("name", "홍길동");
+        model.addAttribute("items", result);
+
+        var a = new Item();
+        System.out.println(a.toString());
+
         return "list.html";
     }
 }

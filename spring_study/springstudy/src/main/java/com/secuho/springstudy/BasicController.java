@@ -19,5 +19,4 @@ public class BasicController {
         return ZonedDateTime.now().toString();
     }
 
-
 }
