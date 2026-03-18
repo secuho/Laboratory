@@ -5,11 +5,11 @@ public class SumWithConstant {
         final int MAX = 5;
         int sum = 0;
 
-        for (int i = 0; i<=MAX; i++) {
+        for (int i = 1; i<=MAX; i++) {
             sum += i;
         }
 
-        System.out.println("1부터 " + MAX + "까지 합은 " + sum + "입니다.");
+        System.out.println("1부터 " + MAX + "까지의 합: " + sum);
 
         return;
     }
