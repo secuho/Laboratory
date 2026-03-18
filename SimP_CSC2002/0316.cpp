@@ -2,43 +2,36 @@
 #include <string>
 using namespace std;
 
-class Rectangle {
-    int weight, height;
+class Sum {
+    int a, b;
     public:
-    Rectangle();
-    Rectangle(int k);
-    Rectangle(int w, int h);
-    bool isSquare();
+    Sum();
+    Sum(int x, int y);
+    int result();
 };
 
-Rectangle::Rectangle() {
-    weight = 1;
-    height = 1;
-}
-Rectangle::Rectangle(int k) {
-    weight = k;
-    height = k;
-}
-Rectangle::Rectangle(int w, int h) {
-    weight = w;
-    height = h;
-}
+Sum::Sum() {
+    int x, y;
+    cout << "x값 입력 : ";
+    cin >> x;
+    cout << "y값 입력 : ";
+    cin >> y;
+    cout << endl;
 
-bool Rectangle::isSquare() {
-    if (weight == height)
-        return true;
-    else
-        return false;
+    Sum(x, y);
+}
+Sum::Sum(int x, int y) {
+    a = x;
+    b = y;
+}
+int Sum::result() {
+    return a+b;
 }
 
 int main() {
-	Rectangle rect1; 
-	Rectangle rect2(3, 5);
-	Rectangle rect3(3);
-
-	if(rect1.isSquare()) cout << "rect1은 정사각형이다." << endl;
-	if(rect2.isSquare()) cout << "rect2는 정사각형이다." << endl;
-	if(rect3.isSquare()) cout << "rect3는 정사각형이다." << endl;
+    Sum hello;
+    int result = hello.result();
+    cout << "결과값 : " << result << endl;
 
 return 0;
 }
