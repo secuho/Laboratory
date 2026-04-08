@@ -1,7 +1,7 @@
 package encapsulationexample;
 
 public class CourseRegistration {
-    static int totalRegistrations;
+    static int totalRegistrations = 0;
 
     private String studentName;
     private String courseName;
@@ -16,7 +16,7 @@ public class CourseRegistration {
     }
 
     public void register() {
-        if (isRegistered == false) {
+        if (!isRegistered) {
             totalRegistrations++;
             isRegistered = true;
         } else {

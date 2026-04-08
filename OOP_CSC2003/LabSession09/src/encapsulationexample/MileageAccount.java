@@ -1,32 +1,34 @@
 package encapsulationexample;
 
-public class MileageAccount {
+class MileageAccount {
     private String ownerName;
     private int mileage;
 
-    MileageAccount(String ownerName, int initialMileage) {
+    public MileageAccount(String ownerName, int initialMileage) {
         this.ownerName = ownerName;
         this.mileage = initialMileage;
     }
 
     public void addMileage(int amount) {
-        if (amount > 0) {
-            mileage += amount;
-        } else {
+        if (amount <= 0) {
             System.out.println("적립 마일리지는 0보다 커야 합니다.");
+            return;
         }
+        mileage += amount;
     }
 
     public void useMileage(int amount) {
-        if (amount > 0) {
-            if (mileage > amount) {
-                mileage -= amount;
-            } else {
-                System.out.println("마일리지가 부족합니다.");
-            }
-        } else {
-            System.out.println("적립 마일리지는 0보다 커야 합니다.");
+        if (amount <= 0) {
+            System.out.println("사용 마일리지는 0보다 커야 합니다.");
+            return;
         }
+
+        if (amount > mileage) {
+            System.out.println("마일리지가 부족합니다.");
+            return;
+        }
+
+        mileage -= amount;
     }
 
     public int getMileage() {
