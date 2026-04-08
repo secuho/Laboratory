@@ -7,6 +7,7 @@ class Line {
     public:
     Line();
     Line(double r, double l);
+    void InputRadius(double r) {radius = r;};
     double getVolume();
 };
 
@@ -20,10 +21,13 @@ double Line::getVolume() {
 
 int main() {
 
-    Line pencil[3] = {Line(0.4, 8), Line(0.7, 8), Line(1.2, 8)};
+    Line *p = new Line[3];
 
+    double temp;
     for (int i=0; i<3; i++) {
-        cout << "pencil[" << i << "]의 부피: " << pencil[i].getVolume() << endl;
+        cout << "p[" << i << "]의 r값 입력 >> ";
+        cin >> temp;
+        ->InputRadius(temp);
     }
 
 }
