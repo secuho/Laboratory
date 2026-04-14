@@ -7,13 +7,13 @@ public class Student {
     private String studentName;
 
     private ArrayList<Subject> subjectList;
-    private ArrayList<Scholarship> scholarshipsList;
+    private ArrayList<Scholarship> scholarshipList;
 
     public Student(int Id, String name) {
         this.studentId = Id;
         this.studentName = name;
         subjectList = new ArrayList<>();
-        scholarshipsList = new ArrayList<>();
+        scholarshipList = new ArrayList<>();
     }
 
     public void addSubject(String name, int score) {
@@ -31,13 +31,13 @@ public class Student {
         }
         System.out.println(studentName + "의 총점은 " + total);
 
-        for (Scholarship scholarship : scholarshipsList) {
+        for (Scholarship scholarship : scholarshipList) {
             scholarship.checkScholarship(this, total);
         }
     }
 
     public void addScholarship(Scholarship scholarship) {
-        scholarshipsList.add(scholarship);
+        scholarshipList.add(scholarship);
     }
 
 
