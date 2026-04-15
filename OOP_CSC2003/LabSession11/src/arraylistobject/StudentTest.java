@@ -1,5 +1,7 @@
 package arraylistobject;
 
+import java.util.ArrayList;
+
 public class StudentTest {
     public static void main(String[] args) {
         Scholarship scholarship1 = new Scholarship("교내 장학금", 200);
@@ -20,7 +22,7 @@ public class StudentTest {
         studentKim.addScholarship(scholarship2);
 
         studentLee.showStudentInfo();
-        System.out.println("==============================");
+        System.out.println("=========================");
         studentKim.showStudentInfo();
     }
 }
