@@ -1,9 +1,9 @@
 package inheritancestudy;
 
 public class Character {
-    private String name;
-    private int level;
-    private int hp;
+    protected String name;
+    protected int level;
+    protected int hp;
 
     public Character(String name) {
         this.name = name;
@@ -11,9 +11,7 @@ public class Character {
         this.hp = 100;
     }
 
-    public void showStatus() {
-        System.out.println("Name: " + name + ", Level: " + level + ", HP: " + hp);
-
-
+    public String showStatus() {
+        return "Name: " + name + ", Level: " + level + ", HP: " + hp;
     }
 }
