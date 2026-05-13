@@ -25,7 +25,7 @@ Palette::~Palette() {
 }
 
 int main() {
-    Palette *p = new Palette();
+    Palette *p = new Palette(); // new, delete는 C++ 기본연산자 !
 
 
 
