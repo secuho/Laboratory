@@ -12,7 +12,7 @@ public:
 
 };
 
-class ColorPoint : public Point {
+class ColorPoint : public Point {   //Inheritage
     string color;
 public:
     void setColor(string color) {this->color = color;}

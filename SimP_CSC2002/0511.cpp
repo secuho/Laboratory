@@ -14,23 +14,25 @@ public:
         cout << "kick=" << kick << ", punch=" << punch << endl;
     }
 
-    Power& operator+=(Power op2);
+    Power operator+(int op2);
 };
 
-Power& Power::operator+=(Power op2) {
-    kick += op2.kick;
-    punch += op2.punch;
-return *this;
+Power Power::operator+(int op2) {
+    Power temp;
+    temp.kick = kick + op2;
+    temp.punch = punch + op2;
+return temp;
 }
 
 
 int main() {
 
-    Power a(3, 5), b(3, 5), c;
-    a.show();
-    b.show();
-    c = a += b; 
-    a.show();
-    b.show();
-    
+    cout << "--- 음식 섭취 전 ---" << endl;
+    raiden.show();
+
+    Character buffedRaiden = 300 + raiden;
+
+    cout << "\n--- '선도장' 음식 섭취 후 ---" <<< endl;
+    bu
+
 }
